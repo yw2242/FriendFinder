@@ -12,7 +12,7 @@
         <div>
             Name: <input type="text" name="name"><br>
         </div>
-        <div>
+        <div id="q1">
             1. I like 'spicy' food<br>
             <input type="radio" name="spicy" value="1">Disagree
             <input type="radio" name="spicy" value="2">Somewhat disagree
@@ -22,7 +22,7 @@
             <br>
             <br>
         </div>
-        <div>
+        <div id="q2">
             2. I like outdoor activities more than indoor activities<br>
             <input type="radio" name="outdoor" value="1">Disagree
             <input type="radio" name="outdoor" value="2">Somewhat disagree
@@ -32,7 +32,7 @@
             <br>
             <br>
         </div>
-        <div>
+        <div id="q3">
             3. I prefer hot weather over cold weather<br>
             <input type="radio" name="weather" value="1">Disagree
             <input type="radio" name="weather" value="2">Somewhat disagree
@@ -42,7 +42,7 @@
             <br>
             <br>
         </div>
-        <div>
+        <div id="q4">
             4. I am interested in looking for jobs in the IT industry<br>
             <input type="radio" name="it" value="1">Disagree
             <input type="radio" name="it" value="2">Somewhat disagree
@@ -52,7 +52,7 @@
             <br>
             <br>
         </div>
-        <div>
+        <div id="q5">
             5. I am introverted<br>
             <input type="radio" name="intro" value="1">Disagree
             <input type="radio" name="intro" value="2">Somewhat disagree
@@ -62,7 +62,7 @@
             <br>
             <br>
         </div>
-        <div>
+        <div id="q6">
             6. I consider myself confident<br>
             <input type="radio" name="conf" value="1">Disagree
             <input type="radio" name="conf" value="2">Somewhat disagree
@@ -72,7 +72,7 @@
             <br>
             <br>
         </div>
-        <div>
+        <div id="q7">
             7. I love boba tea<br>
             <input type="radio" name="boba" value="1">Disagree
             <input type="radio" name="boba" value="2">Somewhat disagree
@@ -82,7 +82,7 @@
             <br>
             <br>
         </div>
-        <div>
+        <div id="q8">
             8. I like to go shopping<br>
             <input type="radio" name="shopping" value="1">Disagree
             <input type="radio" name="shopping" value="2">Somewhat disagree
@@ -92,7 +92,7 @@
             <br>
             <br>
         </div>
-        <div>
+        <div id="q9">
             9. I am a fan of watching movies<br>
             <input type="radio" name="movie" value="1">Disagree
             <input type="radio" name="movie" value="2">Somewhat disagree
@@ -102,7 +102,7 @@
             <br>
             <br>
         </div>
-        <div>
+        <div id="q10">
             10. I like to drive<br>
             <input type="radio" name="drive" value="1">Disagree
             <input type="radio" name="drive" value="2">Somewhat disagree
@@ -125,7 +125,25 @@
         document.getElementById("surveyForm").reset();
 
         $('#submitButton').on('click', function(event) {
-			event.preventDefault();
+            event.preventDefault();
+            
+
+        var userInput = {
+            name: $('#userName').val().trim(),
+            photo: $('#userPhoto').val().trim(),
+            scores:[
+                $('#q1').val().trim(),
+                $('#q2').val().trim(),
+                $('#q3').val().trim(),
+                $('#q4').val().trim(),
+                $('#q5').val().trim(),
+                $('#q6').val().trim(),
+                $('#q7').val().trim(),
+                $('#q8').val().trim(),
+                $('#q9').val().trim(),
+                $('#q10').val().trim()
+            ]
+        };
     
     </script>
 
